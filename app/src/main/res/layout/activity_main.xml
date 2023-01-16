@@ -10,7 +10,7 @@
         android:id="@+id/scrollView"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginBottom="70dp"
+        android:layout_marginBottom="100dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -60,6 +60,7 @@
                 android:id="@+id/editTextTextPersonName"
                 android:layout_width="0dp"
                 android:layout_height="50dp"
+                android:windowSoftInputMode="stateAlwaysHidden"
                 android:layout_marginStart="32dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="32dp"
@@ -155,6 +156,9 @@
                 android:id="@+id/recyclerView"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:clickable="true"
+                android:paddingLeft="22dp"
+                android:paddingRight="22dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView7">
@@ -174,8 +178,12 @@
                 app:layout_constraintTop_toBottomOf="@+id/recyclerView" />
 
             <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView1"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:clipToPadding="true"
+                android:paddingLeft="22dp"
+                android:paddingRight="22dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView12" />
@@ -215,8 +223,8 @@
 
                     <ImageView
                         android:id="@+id/homeImageID"
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
                         android:layout_gravity="center"
                         android:layout_weight="1"
                         app:srcCompat="@drawable/bottom_btn1" />
@@ -240,8 +248,8 @@
 
                     <ImageView
                         android:id="@+id/profileImage"
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
                         android:layout_gravity="center"
                         app:srcCompat="@drawable/bottom_btn2" />
 
@@ -277,8 +285,8 @@
 
                     <ImageView
                         android:id="@+id/supportImage"
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
                         android:layout_gravity="center"
                         android:layout_weight="1"
                         app:srcCompat="@drawable/btn2" />
@@ -302,8 +310,8 @@
 
                     <ImageView
                         android:id="@+id/imageView5"
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
                         android:layout_gravity="center"
                         android:layout_weight="1"
                         app:srcCompat="@drawable/btn4" />
@@ -322,18 +330,20 @@
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/floatingActionButton"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
             android:backgroundTint="#ff5e00"
             android:clickable="true"
             android:elevation="3dp"
+            android:focusable="true"
+            app:layout_anchorGravity="center"
             app:backgroundTint="@color/orange"
             app:layout_anchor="@id/app_bar"
             app:srcCompat="@drawable/shopping_cart"
-            tools:ignore="SpeakableTextPresentCheck"
-            android:focusable="true" />
-
-
+            app:maxImageSize="30dp"
+            app:tint="#ffffff"
+            app:useCompatPadding="true"
+            tools:ignore="SpeakableTextPresentCheck" />
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
