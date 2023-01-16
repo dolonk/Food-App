@@ -35,7 +35,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/textView16"
+                android:id="@+id/sFeeID"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
@@ -48,13 +48,13 @@
                 app:layout_constraintTop_toBottomOf="@+id/sTittleID" />
 
             <ImageView
-                android:id="@+id/imageView6"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:id="@+id/sPicFoodID"
+                android:layout_width="300dp"
+                android:layout_height="300dp"
                 android:layout_marginTop="16dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView16"
+                app:layout_constraintTop_toBottomOf="@+id/sFeeID"
                 app:srcCompat="@drawable/pizza" />
 
             <LinearLayout
@@ -66,12 +66,13 @@
                 android:orientation="horizontal"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageView6">
+                app:layout_constraintTop_toBottomOf="@+id/sPicFoodID">
 
                 <ImageView
                     android:id="@+id/sMinusID"
                     android:layout_width="30dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="3dp"
                     app:srcCompat="@drawable/minus" />
 
                 <TextView
@@ -98,7 +99,7 @@
                 android:id="@+id/sDescriptionID"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
+                android:layout_marginStart="20dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="16dp"
                 android:text="Description"
@@ -117,12 +118,13 @@
         android:id="@+id/sAddToCartBtID"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/button_shape"
         android:text="Add to Cart"
+        android:textAllCaps="false"
         android:textSize="23sp"
         android:textStyle="bold"
-        android:layout_margin="16dp"
-        android:textAllCaps="false"
-        android:background="@drawable/button_shape"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

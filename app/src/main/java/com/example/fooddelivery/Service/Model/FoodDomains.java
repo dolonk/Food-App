@@ -1,6 +1,8 @@
 package com.example.fooddelivery.Service.Model;
 
-public class FoodDomains {
+import java.io.Serializable;
+
+public class FoodDomains implements Serializable {
     private String tittle;
     private String pic;
     private String description;

@@ -1,5 +1,7 @@
 package com.example.fooddelivery.Model.Adapter;
 
+import android.content.Intent;
+import android.os.Parcelable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,6 +14,7 @@ import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.example.fooddelivery.Model.Ui.ShowDetailsActivity;
 import com.example.fooddelivery.R;
 import com.example.fooddelivery.Service.Model.CategoryDomains;
 import com.example.fooddelivery.Service.Model.FoodDomains;
@@ -42,6 +45,12 @@ public class PopularAdapter extends RecyclerView.Adapter<PopularAdapter.ViewHold
         Glide.with(holder.itemView.getContext())
                 .load(drawableResourceId)
                 .into(holder.popularPic);
+
+        holder.popularAdd.setOnClickListener(v -> {
+            Intent intent = new Intent(holder.itemView.getContext(), ShowDetailsActivity.class);
+            intent.putExtra("OBJECT",foodDomains.get(position));
+            holder.itemView.getContext().startActivity(intent);
+        });
     }
 
     @Override
