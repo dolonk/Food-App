@@ -18,6 +18,7 @@ public class Splash extends AppCompatActivity {
         getStart = findViewById(R.id.button);
         getStart.setOnClickListener(v -> {
             startActivity(new Intent(this,MainActivity.class));
+            finish();
         });
 
     }

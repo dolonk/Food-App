@@ -20,7 +20,6 @@ public class ShowDetailsActivity extends AppCompatActivity {
 
     private FoodDomains object;
     int numberOrder=1;
-
     ManagementCart managementCart;
 
     @Override
@@ -34,7 +33,6 @@ public class ShowDetailsActivity extends AppCompatActivity {
     }
 
     private void getBundle() {
-
         object = (FoodDomains) getIntent().getSerializableExtra("OBJECT");
 
         int drawableResourceId = this.getResources().getIdentifier(object.getPic(),"drawable",this.getPackageName());
@@ -62,6 +60,7 @@ public class ShowDetailsActivity extends AppCompatActivity {
         addToCart.setOnClickListener(v -> {
             object.setNumberInCart(numberOrder);
             managementCart.insertFood(object);
+            finish();
         });
 
     }
